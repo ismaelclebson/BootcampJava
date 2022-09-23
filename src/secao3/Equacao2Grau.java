@@ -17,8 +17,8 @@ public class Equacao2Grau {
 		delta = Math.pow(b, 2) - 4*a*c;
 		
 		if (delta >= 0) {
-			x1 = -b + (Math.sqrt(delta))/a;
-			x2 = -b - (Math.sqrt(delta))/a;
+			x1 = (-b + Math.sqrt(delta))/2*a;
+			x2 = (-b - Math.sqrt(delta))/2*a;
 			JOptionPane.showMessageDialog(null, "Raiz x1 é "+x1+"\nRaiz x2 é "+x2);
 		}else
 			JOptionPane.showMessageDialog(null, "Não existem raizes reias");
