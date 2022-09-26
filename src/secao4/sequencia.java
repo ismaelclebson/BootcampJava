@@ -1,20 +1,29 @@
 package secao4;
 
-import javax.swing.JOptionPane;
 
 public class sequencia {
 
 	public static void main(String[] args) {
-		int n, atual;
+		int i, n, n9=0, n10=0, n100=0, n10000=0;
 		
-		n = Integer.parseInt(JOptionPane.showInputDialog("Insira o valor de n:"));
-		atual = 1;
+		n = 1;
 		
-		while(n>1) {
-		atual = atual+3;
-		n--;
+		for(i=2;i<=10000;i++) {
+			n = n+3;
+			if (i == 9)
+				n9 = n;
+			else if (i == 10)
+				n10 = n;
+			else if (i == 100)
+				n100 = n;
+			else if (i == 10000)
+				n10000 = n;
 		}
-		JOptionPane.showMessageDialog(null, atual);
+		System.out.println("S9 = "+n9);
+		System.out.println("S10 = "+n10);
+		System.out.println("S100 = "+n100);
+		System.out.println("S10000 = "+n10000);
+
 	}
 
 }

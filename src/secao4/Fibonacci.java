@@ -7,7 +7,6 @@ public class Fibonacci {
 	public static void main(String[] args) {
 		int n, atual, anterior_2, anterior_1, termo9=0, termo10=0, termo100=0, termo10000=0;
 		
-		//n = Integer.parseInt(JOptionPane.showInputDialog("Insira o valor de n:"));
 		anterior_2 = 1;
 		anterior_1 = 1;
 		atual = 0;
