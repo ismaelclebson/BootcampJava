@@ -20,6 +20,10 @@ public class menorMaiorWhile {
 			else if (numero > numeroMaior)
 				numeroMaior = numero; 
 			
+			System.out.println("Favor informar valor");
+			numero = teclado.nextDouble();
+			
+			
 		}
 		System.out.println("O menor valor é: "+numeroMenor+"\nO Maior valor é: "+numeroMaior);
 		teclado.close();
