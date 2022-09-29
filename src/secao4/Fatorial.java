@@ -14,11 +14,12 @@ public class Fatorial {
 		System.out.println("Favor informar o numero");
 		numero = teclado.nextInt();
 		i = numero;
-		while (i >=1)
-		{
+		
+		do{
 			fatorial = fatorial * i;
 			i--; 
-		}
+		}while (i >=1); 
+		
 		System.out.println("O fatorial do numero: "+numero+"! = "+fatorial);
 		teclado.close();
 	}
