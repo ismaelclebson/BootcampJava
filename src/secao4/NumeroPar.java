@@ -20,7 +20,7 @@ public class NumeroPar {
 				}
 			}
 		}*/
-		if (a>=b) {
+		if (a>b) {
 			
 			for (i = b+1; i<a; i++) {
 			
