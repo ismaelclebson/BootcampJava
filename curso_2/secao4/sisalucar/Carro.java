@@ -2,10 +2,10 @@ package secao4_2.sisalucar;
 
 public class Carro extends Veiculo {
 
-	private int idCarro;
-	private String placa;
+	int idCarro;
+	String placa;
 	private String fabricante;
-	private String modelo;
+	String modelo;
 	private int ano;
 	private String cor;
 	private float valorDiaria;
@@ -93,13 +93,14 @@ public class Carro extends Veiculo {
 	public static void main(String[] args) {
 		
 		Carro carro1 = new Carro(1, "AVC-001", "volkswagen", "luxo", 2001, "preto", 99.90f);
+		@SuppressWarnings("unused")
 		Carro carro2 = new Carro();
 
 		carro1.acelera();
 		carro1.freia();
 		carro1.getPassageiro();
 		carro1.getVelocidade();
-		carro1.autonomia = 40;
+		carro1.getAutonomia(40);
 	}
 	
 }

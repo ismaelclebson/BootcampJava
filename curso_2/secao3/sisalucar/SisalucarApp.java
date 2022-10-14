@@ -41,7 +41,7 @@ public class SisalucarApp {
 		locacao.dataFim=LocalDate.now().plusDays(2);
 		locacao.valorLocado=2*valorDiaria;
 	}
-	public static void gerarRelatorioLocacao(Carro carro1, localDate ...datas) {
+	public static void gerarRelatorioLocacao(Carro carro1, LocalDate ...datas) {
 		float totalFaturado = carro1.valorDiaria;
 	}
 

@@ -1,14 +1,26 @@
 package secao4_2;
 
-public class Funcionario {
+public abstract class Funcionario {
 	
 	public static void main(String[] args) {
-		Funcionario joao = new Funcionario();
+		//Funcionario joao = new Funcionario();
 		Funcionario antonio = new Professor();
 		Funcionario andrea = new Administrativo();
 		Funcionario pedro = new Diretor();
-		pedro.verificarTipoFuncionario(pedro);
+		
+		Funcionario objeto;
+		
+		//polimorfismo
+		objeto = new Diretor();
+		
+		((Diretor)objeto).departamento = "RH"; //Exemplo de casting
+		
+		
+		
 	}
+	
+	public abstract void getBonificacao();
+	
 	
 	void verificarTipoFuncionario(Funcionario objeto) {
 		

@@ -6,4 +6,8 @@ public class Veiculo {
 	public void freia() {}
 	public float getVelocidade() {return 0;}
 	public int getPassageiro() {return 0;}
+	public float getAutonomia(int i) {
+		return autonomia;
+	}
+
 }
