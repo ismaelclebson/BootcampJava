@@ -30,7 +30,6 @@ public class SisalucarApp {
 		SisalucarApp sisalucar = new SisalucarApp();
 		sisalucar.realizarLocacao(carro1.idCarro, cliente1.idCliente, carro1.valorDiaria);
 		gerarRelatorioLocacao(carro1, LocalDate.now(), LocalDate.now().plusDays(5));
-	
 	}
 	public void realizarLocacao(int idCarro, int idCliente, float valorDiaria) {
 		Lotacao locacao = new Lotacao();
