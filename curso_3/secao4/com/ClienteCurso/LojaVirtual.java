@@ -1,5 +1,6 @@
 package secao4.com.ClienteCurso;
 
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -18,6 +19,17 @@ public class LojaVirtual {
 		
 		
 		Cliente clebson = new Cliente("123.456.789-00", "Clebson Silva","lombada@gmail.com");
+		Cliente antonio = new Cliente("123.456.789-00", "Antonio Silva","lombada@gmail.com");
+		Cliente alana = new Cliente("123.456.789-00", "Alana Silva","lombada@gmail.com");
+		Cliente cizina = new Cliente("123.456.789-00", "Cizina Silva","lombada@gmail.com");
+		Cliente ismael = new Cliente("123.456.789-00", "Ismael Silva","lombada@gmail.com");
+		List<String> clientesList = new LinkedList<>();
+		clientesList.add(clebson.getNome());
+		clientesList.add(antonio.getNome());
+		clientesList.add(alana.getNome());
+		clientesList.add(cizina.getNome());
+		clientesList.add(ismael.getNome());
+
 		
 		List<Curso> cursosClebson = new LinkedList<>();
 		
@@ -38,6 +50,11 @@ public class LojaVirtual {
 		}
 		entrada.close();
 		
+		filtrar("C",clientesList);
+		ordenar("C",clientesList);
+		contar("C",clientesList);
+		
+		
 		cursosClebson.forEach(System.out::println);
 		//cursosClebson.forEach(s -> System.out.println(s));
 		
@@ -45,5 +62,20 @@ public class LojaVirtual {
 		System.out.println(pagamentos);
 		
 	}
+	
+	public static void filtrar(String letra, List<String> clientesList) {
+
+		clientesList.stream().filter(s -> s.startsWith(letra)).forEach(System.out::println);
+	}
+	public static void ordenar(String letra, List<String> clientesList) {
+
+		clientesList.stream().sorted().filter(s -> s.startsWith(letra)).forEach(System.out::println);
+	}
+	public static void contar(String letra, List<String> clientesList) {
+		
+		long contador = clientesList.stream().filter(s -> s.startsWith(letra)).count();
+
+		System.err.println(contador);
+	} 
 
 }
