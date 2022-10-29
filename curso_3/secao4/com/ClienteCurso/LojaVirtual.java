@@ -19,7 +19,7 @@ public class LojaVirtual {
 		
 		Cliente clebson = new Cliente("123.456.789-00", "Clebson Silva","lombada@gmail.com");
 		
-		List<Curso> cursosClebson = new LinkedList();
+		List<Curso> cursosClebson = new LinkedList<>();
 		
 		Scanner entrada = new Scanner(System.in);
 		int opcao = 0;
@@ -37,6 +37,10 @@ public class LojaVirtual {
 			
 		}
 		entrada.close();
+		
+		cursosClebson.forEach(System.out::println);
+		//cursosClebson.forEach(s -> System.out.println(s));
+		
 		pagamentos.put(clebson, cursosClebson);
 		System.out.println(pagamentos);
 		
